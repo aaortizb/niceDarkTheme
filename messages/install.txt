@@ -1,0 +1,53 @@
+niceDarkTheme
+=============
+
+Thanks for installing niceDarkTheme.
+
+
+What it needs
+-------------
+
+  Sublime Text 4     Developed and tested on build 4200 (Sublime Text 3 is
+                     untested).
+
+  A File Icon        Draws the file-specific icons in the side bar (MATLAB,
+                     Markdown, images, ...). Without it you only get folder
+                     icons and a generic file icon. You are asked about it
+                     right after this install; if you said no, run
+                     "niceDarkTheme: Install File Icons (A File Icon)" from
+                     the Command Palette. Restart Sublime Text afterwards.
+
+  Terminus           The terminal pane (right or bottom). Optional: without
+                     it, windows open with the side bar and files only.
+                     "niceDarkTheme: Activate" offers to install it.
+
+  JetBrains Mono     A font, only used by "Apply Recommended Settings". It is
+                     not bundled; install it on your system or Sublime falls
+                     back to its default font.
+
+
+Getting started
+---------------
+
+  1. Open the Command Palette (Ctrl/Cmd+Shift+P) and run:
+
+         niceDarkTheme: Activate
+
+     This sets the UI theme and color scheme and applies the default layout:
+
+         side bar | files (70%) | Terminus terminal (30%)
+
+  2. Pick another layout any time, from the Command Palette or from
+     Preferences > Package Settings > niceDarkTheme:
+
+         Terminal on the Right / Terminal at the Bottom / Without Terminal
+
+  3. Optional: "niceDarkTheme: Apply Recommended Settings" writes the author's
+     editor settings (JetBrains Mono 10.5, ruler and wrap at 90, 2-space
+     tabs, ...) and, if Terminus is installed, its history size, font size and
+     PowerShell as the default shell on Windows. It lists every change and
+     asks before writing anything.
+
+Options live in:
+
+    Preferences > Package Settings > niceDarkTheme > Settings

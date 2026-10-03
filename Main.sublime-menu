@@ -1,0 +1,34 @@
+[
+	{
+		"id": "preferences",
+		"children": [
+			{
+				"id": "package-settings",
+				"children": [
+					{
+						"caption": "niceDarkTheme",
+						"children": [
+							{ "caption": "Activate", "command": "nice_activate" },
+							{ "caption": "Apply Recommended Settings", "command": "nice_apply_recommended_settings" },
+							{ "caption": "Install File Icons (A File Icon)", "command": "nice_install_file_icons" },
+							{ "caption": "-" },
+							{ "caption": "Terminal on the Right", "command": "nice_set_terminal_position", "args": { "position": "right" }, "checkbox": true },
+							{ "caption": "Terminal at the Bottom", "command": "nice_set_terminal_position", "args": { "position": "bottom" }, "checkbox": true },
+							{ "caption": "Without Terminal", "command": "nice_set_terminal_position", "args": { "position": "none" }, "checkbox": true },
+							{ "caption": "-" },
+							{
+								"caption": "Settings",
+								"command": "edit_settings",
+								"args": {
+									"base_file": "${packages}/niceDarkTheme/niceDarkTheme.sublime-settings",
+									"default": "// Settings in here override those in \"niceDarkTheme/niceDarkTheme.sublime-settings\"\n{\n\t$0\n}\n"
+								}
+							},
+							{ "caption": "README", "command": "open_file", "args": { "file": "${packages}/niceDarkTheme/README.md" } }
+						]
+					}
+				]
+			}
+		]
+	}
+]

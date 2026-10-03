@@ -1,0 +1,18 @@
+[
+	{ "caption": "niceDarkTheme: Activate", "command": "nice_activate" },
+	{ "caption": "niceDarkTheme: Apply Recommended Settings", "command": "nice_apply_recommended_settings" },
+	{ "caption": "niceDarkTheme: Install File Icons (A File Icon)", "command": "nice_install_file_icons" },
+	{ "caption": "niceDarkTheme: Apply Default Layout", "command": "nice_apply_layout" },
+	{ "caption": "niceDarkTheme: Open Terminal", "command": "nice_open_terminal" },
+	{ "caption": "niceDarkTheme: Terminal on the Right", "command": "nice_set_terminal_position", "args": { "position": "right" } },
+	{ "caption": "niceDarkTheme: Terminal at the Bottom", "command": "nice_set_terminal_position", "args": { "position": "bottom" } },
+	{ "caption": "niceDarkTheme: Without Terminal", "command": "nice_set_terminal_position", "args": { "position": "none" } },
+	{
+		"caption": "Preferences: niceDarkTheme Settings",
+		"command": "edit_settings",
+		"args": {
+			"base_file": "${packages}/niceDarkTheme/niceDarkTheme.sublime-settings",
+			"default": "// Settings in here override those in \"niceDarkTheme/niceDarkTheme.sublime-settings\"\n{\n\t$0\n}\n"
+		}
+	},
+]

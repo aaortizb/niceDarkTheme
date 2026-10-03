@@ -1,0 +1,17 @@
+{
+	// niceDarkTheme: show separators between the side bar, editor and panels.
+	"nice_separator": true,
+
+	// niceDarkTheme: display wider scroll bars.
+	"nice_wide_scrollbars": false,
+
+	// niceDarkTheme: draw a custom, theme-colored title bar. Off by default so the
+	// native (dark) title bar keeps the menu as a horizontal bar. On Windows,
+	// enabling this collapses the menu into a hamburger button.
+	"nice_custom_titlebar": false,
+
+	// niceDarkTheme: indent with 2 spaces by default. Your own Preferences
+	// (and syntax-specific settings) still take precedence.
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true
+}

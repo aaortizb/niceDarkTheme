@@ -1,0 +1,79 @@
+// niceDarkTheme settings.
+// Override any of these in Packages/User/niceDarkTheme.sublime-settings
+// (Preferences > Package Settings > niceDarkTheme > Settings).
+{
+	// ---------------------------------------------------------------------
+	// Default layout: side bar | files | Terminus terminal
+	// ---------------------------------------------------------------------
+
+	// Apply the niceDarkTheme layout to every window when Sublime starts and when
+	// a new window is opened. Only runs while niceDarkTheme is the active theme.
+	"layout_on_startup": true,
+
+	// Where the terminal goes: "right" (a column next to the files),
+	// "bottom" (a row under the files, as wide as the editor area) or
+	// "none" (no terminal: side bar and files only).
+	"terminal_position": "right",
+
+	// Fraction of the editor area used by the terminal: its width when on
+	// the right, its height when at the bottom.
+	"terminal_column_width": 0.3,
+	"terminal_row_height": 0.35,
+
+	// Open a Terminus terminal in the terminal group. Requires the Terminus
+	// package; without it only the two-group layout is applied.
+	"open_terminal": true,
+
+	// Arguments passed to Terminus' "terminus_open" command, e.g.
+	// {"config_name": "PowerShell"} or {"cwd": "${folder}"}.
+	// Empty means the default Terminus shell.
+	"terminal_args": {},
+
+	// Files opened while the terminal has focus would land next to the
+	// terminal; move them to the files group instead.
+	"keep_files_out_of_terminal": true,
+
+	// Return focus to the file column after the terminal opens.
+	"focus_files_after_terminal": true,
+
+	// Show the side bar and hide the minimap when the layout is applied.
+	"show_side_bar": true,
+	"show_minimap": false,
+
+	// ---------------------------------------------------------------------
+	// "niceDarkTheme: Apply Recommended Settings" writes these to your user
+	// Preferences.sublime-settings (after a confirmation dialog).
+	// ---------------------------------------------------------------------
+	"recommended_preferences": {
+		"font_face": "JetBrains Mono",
+		"font_size": 10.5,
+		"caret_style": "phase",
+		"highlight_line": true,
+		"line_padding_top": 1,
+		"line_padding_bottom": 1,
+		"rulers": [90],
+		"word_wrap": true,
+		"wrap_width": 90,
+		"tab_size": 2,
+		"translate_tabs_to_spaces": true,
+		"trim_trailing_white_space_on_save": true,
+		"save_on_focus_lost": true,
+		"index_files": true
+	},
+
+	// Written to your user Terminus.sublime-settings "view_settings".
+	"recommended_terminus_view_settings": {
+		"font_size": 9
+	},
+
+	// Written to your user Terminus.sublime-settings.
+	"recommended_terminus_settings": {
+		// Enough history to scroll back through, without slowing the terminal.
+		"scrollback_history_size": 3000
+	},
+
+	// Default Terminus shell on Windows. Under cmd.exe, full-screen programs
+	// such as Claude Code can lag and misdraw typed characters in Terminus;
+	// PowerShell does not. Set to null to leave the shell alone.
+	"recommended_terminus_shell": "PowerShell"
+}

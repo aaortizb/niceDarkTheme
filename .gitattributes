@@ -1,0 +1,6 @@
+* text=auto
+*.png binary
+# Keep repo-only files out of the Package Control download
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/screenshots export-ignore
