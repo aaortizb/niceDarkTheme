@@ -1,11 +1,7 @@
-import os
-
 import sublime
 import sublime_plugin
 
 SETTINGS = "niceDarkTheme.sublime-settings"
-PACKAGE_CONTROL_SETTINGS = "Package Control.sublime-settings"
-FILE_ICONS_PACKAGE = "A File Icon"
 PREFERENCES = "Preferences.sublime-settings"
 TERMINUS_SETTINGS = "Terminus.sublime-settings"
 
@@ -190,57 +186,6 @@ class NiceSetTerminalPositionCommand(sublime_plugin.WindowCommand):
             view.close()
         # Other tabs in the terminal group move into the files group.
         window.set_layout(SINGLE_LAYOUT)
-
-
-FILE_ICONS_MESSAGE = (
-    "niceDarkTheme shows file-specific icons (MATLAB, Markdown, images, ...) "
-    "in the side bar through the A File Icon package. Without it, files get a "
-    "generic icon.\n\n"
-    "Install A File Icon now? Restart Sublime Text afterwards.")
-
-
-def _package_name():
-    # The folder name, or the name of the .sublime-package when zipped.
-    return os.path.splitext(os.path.basename(os.path.dirname(__file__)))[0]
-
-
-def _file_icons_installed():
-    installed = sublime.load_settings(PACKAGE_CONTROL_SETTINGS).get(
-        "installed_packages", [])
-    return (FILE_ICONS_PACKAGE in installed
-            # A File Icon creates this folder the first time it runs.
-            or os.path.isdir(os.path.join(sublime.packages_path(),
-                                          "zzz " + FILE_ICONS_PACKAGE)))
-
-
-def _ask_to_install_file_icons(window):
-    if sublime.ok_cancel_dialog(FILE_ICONS_MESSAGE, "Install"):
-        window.run_command(
-            "advanced_install_package", {"packages": FILE_ICONS_PACKAGE})
-
-
-def _offer_file_icons():
-    """On the first install through Package Control, offer A File Icon if it
-    is missing. Package Control can't install another package as a
-    dependency, and without it the theme only has folder icons."""
-    try:
-        from package_control import events
-    except ImportError:  # manual install, or Package Control not loaded yet
-        return
-    if events.install(_package_name()) and not _file_icons_installed():
-        window = sublime.active_window()
-        if window:
-            sublime.set_timeout(lambda: _ask_to_install_file_icons(window), 1500)
-
-
-class NiceInstallFileIconsCommand(sublime_plugin.WindowCommand):
-    """Install the A File Icon package, which draws the file-specific icons."""
-
-    def is_enabled(self):
-        return not _file_icons_installed()
-
-    def run(self):
-        _ask_to_install_file_icons(self.window)
 
 
 class NiceNoopCommand(sublime_plugin.WindowCommand):
@@ -481,7 +426,6 @@ def plugin_loaded():
     global _layout_values
     _layout_values = _current_layout_values()
     _settings().add_on_change("niceDarkTheme.layout", _on_settings_change)
-    _offer_file_icons()
     if _theme_active() and _settings().get("layout_on_startup", True):
         sublime.set_timeout(_apply_layout_everywhere, STARTUP_DELAY_MS)
 

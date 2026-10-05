@@ -7,15 +7,8 @@ Thanks for installing niceDarkTheme.
 What it needs
 -------------
 
-  Sublime Text 4     Developed and tested on build 4200 (Sublime Text 3 is
-                     untested).
-
-  A File Icon        Draws the file-specific icons in the side bar (MATLAB,
-                     Markdown, images, ...). Without it you only get folder
-                     icons and a generic file icon. You are asked about it
-                     right after this install; if you said no, run
-                     "niceDarkTheme: Install File Icons (A File Icon)" from
-                     the Command Palette. Restart Sublime Text afterwards.
+  Sublime Text 4     Build 4206 or later (needed for the file icons;
+                     Sublime Text 3 is untested).
 
   Terminus           The terminal pane (right or bottom). Optional: without
                      it, windows open with the side bar and files only.

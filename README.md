@@ -1,6 +1,6 @@
 # niceDarkTheme
 
-A dark UI theme and color scheme for Sublime Text 4, with a three-pane default layout:
+A dark UI theme and color scheme for Sublime Text 4: neutral graphite surfaces (the editor darker than the side bar and tab bar), a teal accent, a colorful but even syntax palette, and matching file icons. It also sets up a three-pane default layout:
 
 ```
 ┌──────────┬──────────────────────────────┬──────────────┐
@@ -49,20 +49,18 @@ You can change the layout at any time, either from the menu under **Preferences 
 
 | What | Needed for | Without it | How to get it |
 |---|---|---|---|
-| [Sublime Text 4](https://www.sublimetext.com) | the theme itself | | developed and tested on build 4200 (Sublime Text 3 is untested) |
-| [A File Icon](https://packagecontrol.io/packages/A%20File%20Icon) | file-specific icons in the side bar | folder icons only, files get a generic icon | niceDarkTheme offers it on first install, or run **niceDarkTheme: Install File Icons (A File Icon)** |
+| [Sublime Text 4](https://www.sublimetext.com) | the theme itself | | build 4206 or later, for the file icons (Sublime Text 3 is untested) |
 | [Terminus](https://packagecontrol.io/packages/Terminus) | the terminal pane (right or bottom) | windows open with the side bar and files only | **niceDarkTheme: Activate** offers it, or **Package Control: Install Package › Terminus** |
 | [JetBrains Mono](https://www.jetbrains.com/lp/mono/) font | only **Apply Recommended Settings**, which sets it as the editor font | Sublime falls back to its default font | install the font on your system; it isn't bundled |
 
-A File Icon and Terminus are separate packages, and Package Control can't install them as dependencies of a theme. That is why they are offered as prompts. Restart Sublime Text after installing A File Icon.
+Terminus is a separate package, and Package Control can't install it as a dependency of a theme. That is why it is offered as a prompt. The file icons need nothing extra: they ship with the theme.
 
 ### Package Control
 
 1. Open the Command Palette (<kbd>Ctrl/Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) and run **Package Control: Install Package**.
 2. Choose **niceDarkTheme**.
-3. When asked, install **A File Icon** (see [File icons](#file-icons)), then restart Sublime Text.
-4. Run **niceDarkTheme: Activate** from the Command Palette. If Terminus is missing, it offers to install it.
-5. Optional: run **niceDarkTheme: Apply Recommended Settings** (see [Commands](#commands)).
+3. Run **niceDarkTheme: Activate** from the Command Palette. If Terminus is missing, it offers to install it.
+4. Optional: run **niceDarkTheme: Apply Recommended Settings** (see [Commands](#commands)).
 
 ### Manual
 
@@ -81,7 +79,7 @@ Or activate it by hand in `Preferences.sublime-settings`:
 
 ### File icons
 
-The folder icons come with the theme. The file-specific icons (MATLAB, Markdown, images, ...) are drawn by the [A File Icon](https://packagecontrol.io/packages/A%20File%20Icon) package, which uses the icon set that ships with niceDarkTheme. Package Control can't install another package automatically, so niceDarkTheme asks you on first install. If you said no, or installed the theme by hand, run **niceDarkTheme: Install File Icons (A File Icon)** from the Command Palette, or **Package Control: Install Package › A File Icon**, and restart Sublime Text. Without A File Icon, files show a generic icon.
+The theme ships its own file icons (MATLAB, Markdown, images, config files such as `package.json`, ...), colored to match its palette, through Sublime's file icon theme feature. Sublime loads `niceDarkTheme.sublime-file-icons` automatically while niceDarkTheme is the active theme; no setting is needed. This needs **Sublime Text build 4206 or later**; on older builds files show a generic icon. To use another icon set, set `file_icon_theme` in your own Preferences. The icons are based on [FileIcons](https://github.com/braver/FileIcons) by Koen Lageveen (MIT), recolored.
 
 ## Layout
 
@@ -111,7 +109,6 @@ Change these options under **Preferences › Package Settings › niceDarkTheme 
 |---|---|
 | niceDarkTheme: Activate | `nice_activate` |
 | niceDarkTheme: Apply Recommended Settings | `nice_apply_recommended_settings` |
-| niceDarkTheme: Install File Icons (A File Icon) | `nice_install_file_icons` |
 | niceDarkTheme: Apply Default Layout | `nice_apply_layout` |
 | niceDarkTheme: Open Terminal | `nice_open_terminal` |
 | niceDarkTheme: Terminal on the Right | `nice_set_terminal_position` `{"position": "right"}` |
@@ -132,8 +129,8 @@ Set these in `Preferences.sublime-settings`:
 | `nice_wide_scrollbars` | `false` | Wider scroll bars |
 | `nice_custom_titlebar` | `false` | Theme-colored title bar. On Windows, this collapses the menu into a hamburger button |
 
-File icons can be customized with [A File Icon](https://packagecontrol.io/packages/A%20File%20Icon).
+File icons can be changed with the `file_icon_theme` setting (see [File icons](#file-icons)).
 
 ## Credits
 
-niceDarkTheme is based on the dark variant of [ayu](https://github.com/dempfi/ayu) by Ike Ku (MIT). See [LICENSE](LICENSE).
+niceDarkTheme started from the dark variant of [ayu](https://github.com/dempfi/ayu) by Ike Ku (MIT); the palette has since been redesigned. The file icons are based on [FileIcons](https://github.com/braver/FileIcons) by Koen Lageveen (MIT), recolored. See [LICENSE](LICENSE).

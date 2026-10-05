@@ -10,7 +10,6 @@
 						"children": [
 							{ "caption": "Activate", "command": "nice_activate" },
 							{ "caption": "Apply Recommended Settings", "command": "nice_apply_recommended_settings" },
-							{ "caption": "Install File Icons (A File Icon)", "command": "nice_install_file_icons" },
 							{ "caption": "-" },
 							{ "caption": "Terminal on the Right", "command": "nice_set_terminal_position", "args": { "position": "right" }, "checkbox": true },
 							{ "caption": "Terminal at the Bottom", "command": "nice_set_terminal_position", "args": { "position": "bottom" }, "checkbox": true },

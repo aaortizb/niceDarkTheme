@@ -1,0 +1,12 @@
+niceDarkTheme 1.1.0
+===================
+
+A new look.
+
+  - New palette: graphite surfaces with a teal accent. The editor is darker
+    than the side bar, tab bar and status bar.
+  - The theme now has its own file icons, colored to match. They replace the
+    A File Icon package, which you can remove if you installed it only for
+    this theme. File icons need Sublime Text build 4206 or later; older
+    builds show a generic icon.
+  - Removed: the A File Icon prompt and the "Install File Icons" command.

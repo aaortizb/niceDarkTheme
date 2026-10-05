@@ -1,7 +1,6 @@
 [
 	{ "caption": "niceDarkTheme: Activate", "command": "nice_activate" },
 	{ "caption": "niceDarkTheme: Apply Recommended Settings", "command": "nice_apply_recommended_settings" },
-	{ "caption": "niceDarkTheme: Install File Icons (A File Icon)", "command": "nice_install_file_icons" },
 	{ "caption": "niceDarkTheme: Apply Default Layout", "command": "nice_apply_layout" },
 	{ "caption": "niceDarkTheme: Open Terminal", "command": "nice_open_terminal" },
 	{ "caption": "niceDarkTheme: Terminal on the Right", "command": "nice_set_terminal_position", "args": { "position": "right" } },
