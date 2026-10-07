@@ -79,7 +79,7 @@ Or activate it by hand in `Preferences.sublime-settings`:
 
 ### File icons
 
-The theme ships its own file icons (MATLAB, Markdown, images, config files such as `package.json`, ...), colored to match its palette, through Sublime's file icon theme feature. Sublime loads `niceDarkTheme.sublime-file-icons` automatically while niceDarkTheme is the active theme; no setting is needed. This needs **Sublime Text build 4206 or later**; on older builds files show a generic icon. To use another icon set, set `file_icon_theme` in your own Preferences. The icons are based on [FileIcons](https://github.com/braver/FileIcons) by Koen Lageveen (MIT), recolored.
+The theme ships its own file icons (MATLAB, Markdown, images, config files such as `package.json`, ...), colored to match its palette, through Sublime's file icon theme feature. Sublime loads `niceDarkTheme.sublime-file-icons` automatically while niceDarkTheme is the active theme; no setting is needed. This needs **Sublime Text build 4206 or later**; on older builds files show a generic icon. To use another icon set, set `file_icon_theme` in your own Preferences to the full file name of that set, for example `"file_icon_theme": ["FileIcons (color).sublime-file-icons"]`. To refer to this theme's set explicitly, the file name is `niceDarkTheme.sublime-file-icons`. The icons are based on [FileIcons](https://github.com/braver/FileIcons) by Koen Lageveen (MIT), recolored.
 
 ## Layout
 
