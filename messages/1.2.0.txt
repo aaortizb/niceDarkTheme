@@ -1,0 +1,6 @@
+niceDarkTheme 1.2.0
+===================
+
+  - 25 new file icons, synced from FileIcons (Astro, Django, Jinja, Lean,
+    MDX, Nunjucks, Quarto, SystemVerilog, Verilog, ...), recolored to match
+    the theme.
